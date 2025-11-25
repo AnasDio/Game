@@ -28,6 +28,9 @@ function resetAllFlips() {
   applyOrderToCards(arr1, shuffle(orderRange));
   document.querySelector(".restart").style.display = "none";
   document.querySelector(".tries span").innerHTML = 0;
+  document.querySelector(".name span").innerHTML = 0;
+  clearInterval(up);
+  timer();
 }
 
 // the difficulty changer
@@ -62,6 +65,7 @@ applyOrderToCards(arr1, shuffled);
 start.addEventListener("click", function () {
   start.previousElementSibling.remove();
   start.remove();
+  timer();
 });
 
 // mode buttons for easy and hard
@@ -149,12 +153,24 @@ function matchingCards(first, second) {
     }, 800);
   }
 }
+
+//timer
+let up;
+function timer() {
+  let time = 0;
+  document.querySelector(".name span").innerHTML = `${time}`;
+  up = setInterval(() => {
+    document.querySelector(".name span").innerHTML = `${++time}`;
+  }, 1000);
+}
+
 function gameComplete() {
   let flag = Array.from(cards).every((ele) =>
     ele.classList.contains("is-done")
   );
   if (flag) {
     document.querySelector(".restart").style.display = "block";
+    clearInterval(up);
   }
 }
 // Initialize the game
