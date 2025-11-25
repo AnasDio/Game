@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta author="Anas" />
+    <meta year="2025" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="memory.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="info">
+      <div class="name">Hello, World!</div>
+      <div><button id="hard">Hard</button> | <button>Normal</button></div>
+      <div class="tries">Wrong tries: <span>0</span></div>
+    </div>
+    <div class="container-easy" id="main">
+      <div class="cards" id="1">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-sharp fa-solid fa-bowl-food" style="color: #63e6be"></i>
+        </div>
+      </div>
+      <div class="cards" id="1">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-sharp fa-solid fa-bowl-food" style="color: #63e6be"></i>
+        </div>
+      </div>
+      <div class="cards" id="2">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-burger" style="color: #57d204"></i>
+        </div>
+      </div>
+      <div id="2" class="cards">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-burger" style="color: #57d204"></i>
+        </div>
+      </div>
+      <div class="cards" id="3">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-cheese" style="color: #084dc4"></i>
+        </div>
+      </div>
+      <div class="cards" id="3">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-cheese" style="color: #084dc4"></i>
+        </div>
+      </div>
+      <div class="cards" id="4">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-fish" style="color: #de0dc2"></i>
+        </div>
+      </div>
+      <div class="cards" id="4">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-fish" style="color: #de0dc2"></i>
+        </div>
+      </div>
+      <div class="cards" id="5">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-apple-whole" style="color: #00e9fa"></i>
+        </div>
+      </div>
+      <div class="cards" id="5">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-apple-whole" style="color: #00e9fa"></i>
+        </div>
+      </div>
+      <div class="cards" id="6">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-cake-candles" style="color: #f00000"></i>
+        </div>
+      </div>
+      <div class="cards" id="6">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-cake-candles" style="color: #f00000"></i>
+        </div>
+      </div>
+      <div class="cards" id="7">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-cookie" style="color: #b197fc"></i>
+        </div>
+      </div>
+      <div class="cards" id="7">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-cookie" style="color: #b197fc"></i>
+        </div>
+      </div>
+      <div class="cards" id="8">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-pizza-slice" style="color: #ffd43b"></i>
+        </div>
+      </div>
+      <div class="cards" id="8">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-pizza-slice" style="color: #ffd43b"></i>
+        </div>
+      </div>
+      <div class="cards" id="9">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-ice-cream" style="color: #8c00ff"></i>
+        </div>
+      </div>
+      <div class="cards" id="9">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-ice-cream" style="color: #8c00ff"></i>
+        </div>
+      </div>
+      <div class="cards" id="10">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-carrot" style="color: #00ff33"></i>
+        </div>
+      </div>
+      <div class="cards" id="10">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-carrot" style="color: #00ff33"></i>
+        </div>
+      </div>
+      <div class="cards hard" id="11">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-drumstick-bite" style="color: #74c0fc"></i>
+        </div>
+      </div>
+      <div class="cards hard" id="11">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-drumstick-bite" style="color: #74c0fc"></i>
+        </div>
+      </div>
+      <div class="cards hard" id="12">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-pepper-hot" style="color: #b197fc"></i>
+        </div>
+      </div>
+      <div class="cards hard" id="12">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-pepper-hot" style="color: #b197fc"></i>
+        </div>
+      </div>
+      <div class="cards hard" id="13">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-candy-cane" style="color: #ffd43b"></i>
+        </div>
+      </div>
+      <div class="cards hard" id="13">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-candy-cane" style="color: #ffd43b"></i>
+        </div>
+      </div>
+      <div class="cards hard" id="14">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-mug-saucer" style="color: #000000"></i>
+        </div>
+      </div>
+      <div class="cards hard" id="14">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-mug-saucer" style="color: #000000"></i>
+        </div>
+      </div>
+      <div class="cards hard" id="15">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-shrimp" style="color: #c2aedb"></i>
+        </div>
+      </div>
+      <div class="cards hard" id="15">
+        <div class="back"></div>
+        <div class="front">
+          <i class="fa-solid fa-shrimp" style="color: #c2aedb"></i>
+        </div>
+      </div>
+    </div>
+    <div class="cover"></div>
+    <button class="special">Start Game!</button>
+    <button class="restart" onclick="resetAllFlips()">Play Again!</button>
+    <script src="memory.js"></script>
+  </body>
+</html>
